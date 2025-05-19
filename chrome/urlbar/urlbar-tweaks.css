@@ -1,0 +1,35 @@
+/* Make address bar more like Brave */
+#urlbar {
+  border-radius: 10px !important;
+  padding: 2px 8px !important;
+  background-color: var(--toolbar-field-background-color) !important;
+  border: 1px solid var(--toolbar-field-border-color) !important;
+  box-shadow: none !important;
+}
+
+/* URL bar results dropdown */
+#urlbar-results {
+  border-radius: 10px !important;
+  background-color: var(--arrowpanel-background) !important;
+}
+
+/* Remove inner shadow and adjust spacing */
+#urlbar-background {
+  box-shadow: none !important;
+  border-radius: 5px !important;
+  margin: 0px !important;
+}
+
+/* Remove extra icons like 'Page Actions' if you want */
+#page-action-buttons {
+  display: none !important;
+}
+
+/* Optional: make the icons inside the urlbar cleaner */
+#identity-box,
+#tracking-protection-icon-container,
+#permissions-granted-icon,
+#connection-icon,
+#identity-icon-label {
+  margin-inline: 4px !important;
+}
