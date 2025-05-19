@@ -9,9 +9,9 @@
 
 /****************************************************************************
  * Betterfox                                                                *
- * "Memento mori"                                                           *
- * version: 119                                                             *
- * url: https://github.com/nvt194/Betterfox                                 *
+ * "Non ducor duco"                                                           *
+ * version: 137                                                             *
+ * url: https://github.com/yokoffing/Betterfox                                 *
 ****************************************************************************/
 
 /****************************************************************************
@@ -49,6 +49,7 @@ user_pref("network.ssl_tokens_cache_capacity", 10240);
 
 /** SPECULATIVE LOADING ***/
 user_pref("network.dns.disablePrefetch", true);
+user_pref("network.dns.disablePrefetchFromHTTPS", true);
 user_pref("network.prefetch-next", false);
 user_pref("network.predictor.enabled", false);
 
@@ -99,6 +100,9 @@ user_pref("browser.formfill.enable", false);
 user_pref("security.insecure_connection_text.enabled", true);
 user_pref("security.insecure_connection_text.pbmode.enabled", true);
 user_pref("network.IDN_show_punycode", true);
+user_pref("browser.urlbar.quicksuggest.enabled", false);
+user_pref("browser.urlbar.groupLabels.enabled", false);
+user_pref("browser.search.update", false);
 
 /** HTTPS-FIRST POLICY ***/
 user_pref("dom.security.https_first", true);
@@ -137,7 +141,7 @@ user_pref("browser.safebrowsing.downloads.remote.enabled", false);
 /** MOZILLA ***/
 user_pref("permissions.default.desktop-notification", 2);
 user_pref("permissions.default.geo", 2);
-user_pref("geo.provider.network.url", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
+user_pref("geo.provider.network.url", "https://beacondb.net/v1/geolocate");
 user_pref("permissions.manager.defaultsUrl", "");
 user_pref("webchannel.allowObject.urlWhitelist", "");
 
@@ -215,10 +219,17 @@ user_pref("full-screen-api.warning.timeout", 0);
 user_pref("browser.urlbar.suggest.calculator", true);
 user_pref("browser.urlbar.unitConversion.enabled", true);
 user_pref("browser.urlbar.trending.featureGate", false);
+user_pref("browser.urlbar.suggest.engines", false);
+user_pref("browser.urlbar.unitConversion.enabled", true);
+user_pref("browser.urlbar.trending.featureGate", false);
+user_pref("dom.text_fragments.create_text_fragment.enabled", true);
+
 
 /** NEW TAB PAGE ***/
 user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
+user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
+user_pref("browser.newtabpage.activity-stream.default.sites", "");
 
 /*** POCKET ***/
 user_pref("extensions.pocket.enabled", false);
