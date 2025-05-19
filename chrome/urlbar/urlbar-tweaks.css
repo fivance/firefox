@@ -9,7 +9,7 @@
 
 /* URL bar results dropdown */
 #urlbar-results {
-  border-radius: 10px !important;
+  border-radius: -3px !important;
   background-color: var(--arrowpanel-background) !important;
 }
 
