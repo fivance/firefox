@@ -13,22 +13,24 @@ if (-not $profile) {
 }
 
 $profilePath = $profile.FullName
-Write-Host "Found Firefox profile: $profilePath"
 
-Write-Host "⬇ Downloading GitHub repo ZIP..."
 Invoke-WebRequest -Uri $zipUrl -OutFile $zipPath
 
-Write-Host "Extracting to profile folder..."
+Write-Host "Extracting ZIP..."
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $tempExtractPath = "$env:TEMP\ff-extract"
-if (Test-Path $tempExtractPath) { Remove-Item -Recurse -Force $tempExtractPath }
+if (Test-Path $tempExtractPath) {
+    Remove-Item -Recurse -Force $tempExtractPath
+}
 [System.IO.Compression.ZipFile]::ExtractToDirectory($zipPath, $tempExtractPath)
 
 $extractedDir = Get-ChildItem $tempExtractPath | Where-Object { $_.PSIsContainer } | Select-Object -First 1
-Copy-Item -Path "$($extractedDir.FullName)\*" -Destination $profilePath -Recurse -Force
 
-Write-Host "Cleaning up..."
+Write-Host "Copying files to profile..."
+robocopy "$($extractedDir.FullName)" "$profilePath" /E /IS /IT /NFL /NDL /NJH /NJS /NC /NS
+
 Remove-Item $zipPath -Force
 Remove-Item $tempExtractPath -Recurse -Force
 
-Write-Host "Done! Restart Firefox to apply your tweaks."
+Write-Host "Restart Firefox to apply your tweaks."
+Start-Sleep -Seconds 3
