@@ -531,7 +531,6 @@ user_pref("network.dns.echconfig.fallback_to_origin_when_all_failed", false);
 user_pref("network.dns.force_use_https_rr", true); #Force website to wait for HTTPS record
 user_pref("network.dns.force_waiting_https_rr", true);
 user_pref("network.dns.echconfig.enabled", true); 
-user_pref("network.http.http3.alt-svc-mapping-for-testing", "doh3.dns.nextdns.io;h3=\":443\"; quicv=\"6b3343cf,1\""); Enable QUICv2
 user_pref("network.http.http3.send_background_tabs_deprioritization", true); #HTTP3
 user_pref("network.http.http3.version_negotiation.enabled", true);
 user_pref("network.trr.async_connInfo", true); #TRR
