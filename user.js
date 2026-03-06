@@ -61,7 +61,6 @@ user_pref("app.update.background.scheduling.enabled", false);
 user_pref("app.update.auto", false);
 user_pref("app.update.autoInstallEnabled", false);
 user_pref("app.update.enabled", false);
-user_pref("app.update.silent", true);
 user_pref("extensions.update.autoUpdateDefault", false);
 user_pref("app.update.service.enabled", false);
 user_pref("app.update.silent", false);
@@ -527,6 +526,13 @@ user_pref("permissions.delegation.enabled", false);
 user_pref("browser.tabs.searchclipboardfor.middleclick", false);
 user_pref("browser.messaging-system.whatsNewPanel.enabled", false);
 user_pref("browser.urlbar.showSearchTerms.enabled", false);
+
+// AI //
+user_pref("browser.ml.enable", false);
+user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false);
+user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
+user_pref("browser.urlbar.mdn.featureGate", false);
+user_pref("browser.ml.modelCacheMaxSize", 0);
 
 // OVERRIDES //
 user_pref("browser.theme.dark-private-windows", true); 
