@@ -1,4 +1,3 @@
-@import url("content/common.css");
-@import url("content/newtab.css");
-@import url("content/card-container.css");
-@import url("global/tweaks.css");
+@import "user-content.css";
+@import "theme-material-blue.css";
+@import "custom.css";

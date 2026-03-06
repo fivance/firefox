@@ -1,9 +1,3 @@
-@import url("toolbar/tabbar.css");
-@import url("toolbar/navbar.css");
-@import url("toolbar/personalbar.css");
-@import url("toolbar/urlbar.css");
-@import url("toolbar/searchbar.css");
-@import url("global/general.css");
-@import url("icons/icons.css");
-@import url("urlbar/urlbar-tweaks.css");
-@import url("global/rounded-corners.css") -moz-pref("fp.tweak.rounded-corners");
+@import "user-chrome.css";
+@import "theme-material-blue.css";
+@import "custom.css";
