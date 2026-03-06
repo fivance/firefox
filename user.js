@@ -9,38 +9,50 @@ user_pref("gfx.content.skia-font-cache-size", 20);
 user_pref("gfx.webrender.compositor", false);
 
 // SMOOTH SCROLLING //
-user_pref("mousewheel.acceleration.factor", 5);                                            // preset     5        ACCEL MAX SPEED 1-20           [10]
-user_pref("mousewheel.acceleration.start", 4);                                             // preset     4        accel after x ticks            [-1]
-user_pref("mousewheel.default.delta_multiplier_x", 100);                                   // preset   100           reset previous             [100]
-user_pref("mousewheel.default.delta_multiplier_y", 100);                                   // preset   100           reset previous             [100]
-user_pref("mousewheel.default.delta_multiplier_z", 100);                                   // preset   100           reset previous             [100]
-user_pref("mousewheel.system_scroll_override_on_root_content.enabled", false);             // preset  false       ignoring sys accel           [true]
-user_pref("mousewheel.transaction.timeout", 1500);                                         // preset  1500           reset previous            [1500]
-user_pref("mousewheel.min_line_scroll_amount", 0);                                         // preset     0       lines vary with accel            [5]
-user_pref("toolkit.scrollbox.horizontalScrollDistance", 3);                                // preset     3       keyboard matches mwheel          [5]
-user_pref("toolkit.scrollbox.verticalScrollDistance", 3);                                  // preset     3       keyboard matches mwheel          [3]
-user_pref("layers.async-pan-zoom.enabled", true);                                          // preset  true          smoothness boost           [true]
-user_pref("apz.force_disable_desktop_zooming_scrollbars", true);                           // preset  true          keyboard fix I            [false]
-user_pref("apz.paint_skipping.enabled", false);                                            // preset  false         keyboard fix II v85        [true]
-user_pref("dom.event.wheel-deltaMode-lines.always-disabled", true);                        // preset  true       report wheel in pixels       [false]
-user_pref("layout.css.scroll-behavior.spring-constant", "300.0");                          // preset  "300"      css mimics gecko scroll        [250]
-user_pref("general.smoothScroll.mouseWheel.migrationPercent", 100);                        // preset   100      lame pref wreks settings        [100]
-user_pref("general.smoothScroll.msdPhysics.enabled", false);                               // preset  false        no stutering fling         [false]
-user_pref("general.smoothScroll.currentVelocityWeighting", "0.0");                         // preset  "0.0"          reduce stutter            [0.25]
-user_pref("general.smoothScroll.durationToIntervalRatio", 400);                            // preset   400           reduce stutter             [200]
-user_pref("general.smoothScroll.stopDecelerationWeighting", "0.0");                        // preset  "0.0"          reduce stutter             [0.4]
-user_pref("general.smoothScroll.lines.durationMaxMS", 300);                                // preset   300          arrows smoothing            [150]
-user_pref("general.smoothScroll.lines.durationMinMS", 300);                                // preset   300          arrows smoothing            [150]
-user_pref("general.smoothScroll.mouseWheel.durationMaxMS", 300);                           // preset   300          mwheel smoothing            [200]
-user_pref("general.smoothScroll.mouseWheel.durationMinMS", 300);                           // preset   300          mwheel smoothing             [50]
-user_pref("general.smoothScroll.other.durationMaxMS", 150);                                // preset   150          home-end smoothing          [150]
-user_pref("general.smoothScroll.other.durationMinMS", 150);                                // preset   150          home-end smoothing          [150]
-user_pref("general.smoothScroll.pages.durationMaxMS", 200);                                // preset   200         pgup-pgdn smoothing          [150]
-user_pref("general.smoothScroll.pages.durationMinMS", 200);                                // preset   200         pgup-pgdn smoothing          [150]
-user_pref("general.smoothScroll.pixels.durationMaxMS", 300);                               // preset   300           pixel smoothing            [150]
-user_pref("general.smoothScroll.pixels.durationMinMS", 300);                               // preset   300           pixel smoothing            [150]
-user_pref("general.smoothScroll.scrollbars.durationMaxMS", 500);                           // preset   500         scrollbar smoothing          [150]
-user_pref("general.smoothScroll.scrollbars.durationMinMS", 500);                           // preset   500  
+
+user_pref("general.smoothScroll", true);
+user_pref("general.smoothScroll.currentVelocityWeighting", 1);
+user_pref("general.smoothScroll.msdPhysics.continuousMotionMaxDeltaMS", 12);
+user_pref("general.smoothScroll.msdPhysics.enabled", true); 
+user_pref("general.smoothScroll.msdPhysics.motionBeginSpringConstant", 600); 
+user_pref("general.smoothScroll.msdPhysics.regularSpringConstant", 250);
+user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaMS", 25);
+user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaRatio", 0.3);
+user_pref("general.smoothScroll.msdPhysics.slowdownSpringConstant", 250); 
+user_pref("general.smoothScroll.stopDecelerationWeighting", 1.0);
+user_pref("mousewheel.default.delta_multiplier_y", 300); 
+//user_pref("mousewheel.acceleration.factor", 5);                                            // preset     5        ACCEL MAX SPEED 1-20           [10]
+//user_pref("mousewheel.acceleration.start", 4);                                             // preset     4        accel after x ticks            [-1]
+//user_pref("mousewheel.default.delta_multiplier_x", 100);                                   // preset   100           reset previous             [100]
+//user_pref("mousewheel.default.delta_multiplier_y", 100);                                   // preset   100           reset previous             [100]
+//user_pref("mousewheel.default.delta_multiplier_z", 100);                                   // preset   100           reset previous             [100]
+//user_pref("mousewheel.system_scroll_override_on_root_content.enabled", false);             // preset  false       ignoring sys accel           [true]
+//user_pref("mousewheel.transaction.timeout", 1500);                                         // preset  1500           reset previous            [1500]
+//user_pref("mousewheel.min_line_scroll_amount", 0);                                         // preset     0       lines vary with accel            [5]
+//user_pref("toolkit.scrollbox.horizontalScrollDistance", 3);                                // preset     3       keyboard matches mwheel          [5]
+//user_pref("toolkit.scrollbox.verticalScrollDistance", 3);                                  // preset     3       keyboard matches mwheel          [3]
+//user_pref("layers.async-pan-zoom.enabled", true);                                          // preset  true          smoothness boost           [true]
+//user_pref("apz.force_disable_desktop_zooming_scrollbars", true);                           // preset  true          keyboard fix I            [false]
+//user_pref("apz.paint_skipping.enabled", false);                                            // preset  false         keyboard fix II v85        [true]
+//user_pref("dom.event.wheel-deltaMode-lines.always-disabled", true);                        // preset  true       report wheel in pixels       [false]
+//user_pref("layout.css.scroll-behavior.spring-constant", "300.0");                          // preset  "300"      css mimics gecko scroll        [250]
+//user_pref("general.smoothScroll.mouseWheel.migrationPercent", 100);                        // preset   100      lame pref wreks settings        [100]
+//user_pref("general.smoothScroll.msdPhysics.enabled", false);                               // preset  false        no stutering fling         [false]
+//user_pref("general.smoothScroll.currentVelocityWeighting", "0.0");                         // preset  "0.0"          reduce stutter            [0.25]
+//user_pref("general.smoothScroll.durationToIntervalRatio", 400);                            // preset   400           reduce stutter             [200]
+//user_pref("general.smoothScroll.stopDecelerationWeighting", "0.0");                        // preset  "0.0"          reduce stutter             [0.4]
+//user_pref("general.smoothScroll.lines.durationMaxMS", 300);                                // preset   300          arrows smoothing            [150]
+//user_pref("general.smoothScroll.lines.durationMinMS", 300);                                // preset   300          arrows smoothing            [150]
+//user_pref("general.smoothScroll.mouseWheel.durationMaxMS", 300);                           // preset   300          mwheel smoothing            [200]
+//user_pref("general.smoothScroll.mouseWheel.durationMinMS", 300);                           // preset   300          mwheel smoothing             [50]
+//user_pref("general.smoothScroll.other.durationMaxMS", 150);                                // preset   150          home-end smoothing          [150]
+//user_pref("general.smoothScroll.other.durationMinMS", 150);                                // preset   150          home-end smoothing          [150]
+//user_pref("general.smoothScroll.pages.durationMaxMS", 200);                                // preset   200         pgup-pgdn smoothing          [150]
+//user_pref("general.smoothScroll.pages.durationMinMS", 200);                                // preset   200         pgup-pgdn smoothing          [150]
+//user_pref("general.smoothScroll.pixels.durationMaxMS", 300);                               // preset   300           pixel smoothing            [150]
+//user_pref("general.smoothScroll.pixels.durationMinMS", 300);                               // preset   300           pixel smoothing            [150]
+//user_pref("general.smoothScroll.scrollbars.durationMaxMS", 500);                           // preset   500         scrollbar smoothing          [150]
+//user_pref("general.smoothScroll.scrollbars.durationMinMS", 500);                           // preset   500  
 
 // STARTUP SETTINGS //
 user_pref("accessibility.force_disabled", 1);
@@ -439,7 +451,7 @@ user_pref("security.ssl.require_safe_negotiation", true);
 user_pref("security.tls.enable_0rtt_data", false);
 user_pref("security.OCSP.enabled", 1);
 user_pref("security.OCSP.require", true);
-user_pref("security.cert_pinning.enforcement_level", 2);
+user_pref("security.cert_pinning.enforcement_level", 1);
 user_pref("security.remote_settings.crlite_filters.enabled", true);
 user_pref("security.pki.crlite_mode", 2);
 user_pref("dom.security.https_only_mode", true);
@@ -547,3 +559,4 @@ user_pref("browser.cache.memory.max_entry_size", 512000);
 user_pref("network.http.rcwn.enabled", false); #Use RAM as networkcache
 user_pref("network.early-hints.enabled", true); #Preloading pages
 user_pref("network.early-hints.preconnect.enabled", true);
+user_pref("sidebar.revamp", false);
