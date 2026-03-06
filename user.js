@@ -560,3 +560,4 @@ user_pref("network.http.rcwn.enabled", false); #Use RAM as networkcache
 user_pref("network.early-hints.enabled", true); #Preloading pages
 user_pref("network.early-hints.preconnect.enabled", true);
 user_pref("sidebar.revamp", false);
+user_pref("layout.spellcheckDefault", 0);
