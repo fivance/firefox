@@ -20,7 +20,7 @@ user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaMS", 25);
 user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaRatio", 0.3);
 user_pref("general.smoothScroll.msdPhysics.slowdownSpringConstant", 250); 
 user_pref("general.smoothScroll.stopDecelerationWeighting", 1.0);
-user_pref("mousewheel.default.delta_multiplier_y", 300); 
+user_pref("mousewheel.default.delta_multiplier_y", 100); 
 //user_pref("mousewheel.acceleration.factor", 5);                                            // preset     5        ACCEL MAX SPEED 1-20           [10]
 //user_pref("mousewheel.acceleration.start", 4);                                             // preset     4        accel after x ticks            [-1]
 //user_pref("mousewheel.default.delta_multiplier_x", 100);                                   // preset   100           reset previous             [100]
