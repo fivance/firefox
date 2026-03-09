@@ -265,7 +265,7 @@ user_pref("privacy.partition.always_partition_third_party_non_cookie_storage", t
 user_pref("privacy.partition.always_partition_third_party_non_cookie_storage.exempt_sessionstorage", false);
 
 // SHUTDOWN //
-user_pref("network.cookie.lifetimePolicy", 2);
+user_pref("network.cookie.lifetimePolicy", 0);
 user_pref("privacy.sanitize.sanitizeOnShutdown", false);
 user_pref("privacy.clearOnShutdown.cache", true);
 user_pref("privacy.clearOnShutdown.cookies", false);
@@ -273,7 +273,7 @@ user_pref("privacy.clearOnShutdown.downloads", false);
 user_pref("privacy.clearOnShutdown.formdata", true);
 user_pref("privacy.clearOnShutdown.history", false);
 user_pref("privacy.clearOnShutdown.offlineApps", true);
-user_pref("privacy.clearOnShutdown.sessions", true);
+user_pref("privacy.clearOnShutdown.sessions", false);
 user_pref("privacy.clearOnShutdown.siteSettings", true);
 user_pref("privacy.sanitize.timeSpan", 0);
 user_pref("places.history.enabled", true);

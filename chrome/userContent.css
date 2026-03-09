@@ -1,3 +1,7 @@
-@import "user-content.css";
-@import "theme-material-blue.css";
-@import "custom.css";
+@layer BasicPriority, HighPriority, VeryHighPriority;
+
+/* ---------- General styles ---------- */
+
+@import "modules/general_styles/wavefox_web_page_userContent.css" layer(BasicPriority); /* supports() -moz-pref("", false) */
+
+/* ---------------------------------------- Third-party styles (Maximum priority) ---------------------------------------- */
